@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void clickServiceButton(View v) {
+    public void clickServiceButton(View v) {
         Intent intent = new Intent(this, MyService.class);
         intent.putExtra("command", "show");
         intent.putExtra("name", edittext_name.getText().toString());

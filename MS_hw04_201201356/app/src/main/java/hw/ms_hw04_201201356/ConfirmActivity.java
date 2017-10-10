@@ -5,18 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ConfirmActivity extends AppCompatActivity {
 
-    private EditText edittext_confirm;
+    private TextView textview_confirm;
     private Button button_menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_confirm);
 
         Intent getIntent = getIntent();
         final String type = getIntent.getStringExtra("type");
@@ -24,8 +24,8 @@ public class ConfirmActivity extends AppCompatActivity {
         final int confirm = getIntent.getIntExtra("confirm", 0);
         Toast.makeText(getApplicationContext(), confirmMessage, Toast.LENGTH_LONG).show();
 
-        edittext_confirm = (EditText) findViewById(R.id.edittext_confirm);
-        edittext_confirm.setText(confirmMessage);
+        textview_confirm = (TextView) findViewById(R.id.textview_confirm);
+        textview_confirm.setText(confirmMessage);
 
         button_menu = (Button) findViewById(R.id.button_menu);
         button_menu.setOnClickListener(new View.OnClickListener() {

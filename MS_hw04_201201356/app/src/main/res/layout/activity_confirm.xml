@@ -9,8 +9,8 @@
     android:gravity="center"
     android:padding="30dp">
 
-    <EditText
-        android:id="@+id/edittext_confirm"
+    <TextView
+        android:id="@+id/textview_confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp" />

@@ -4,7 +4,6 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,9 +12,13 @@ import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
-    public static final int REQUEST_CODE_MENU = 201201356;
+    public static final int REQUEST_CODE_MENU = 1356;
     public static final int RESULT_CODE_DENY = 0;
     public static final int RESULT_CODE_ALLOW = -1;
+
+    public static final int REQUEST_PERMISSION_LOCATION = 1;
+    public static final int REQUEST_PERMISSION_CALENDAR = 2;
+    public static final int REQUEST_PERMISSION_CAMERA = 3;
 
     private Button button_location;
     private Button button_calendar;
@@ -31,15 +34,7 @@ public class MenuActivity extends AppCompatActivity {
         button_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION)
-                        == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(getApplicationContext(), "위치 권한이 있습니다.", Toast.LENGTH_LONG).show();
-                } else {
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(MenuActivity.this, Manifest.permission.ACCESS_FINE_LOCATION))
-                        Toast.makeText(getApplicationContext(), "위치 권한이 필요합니다.", Toast.LENGTH_LONG).show();
-                    else
-                        ActivityCompat.requestPermissions(MenuActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 0);
-                }
+                ActivityCompat.requestPermissions(MenuActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSION_LOCATION);
             }
         });
 
@@ -47,15 +42,7 @@ public class MenuActivity extends AppCompatActivity {
         button_calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_CALENDAR)
-                        == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(getApplicationContext(), "달력 권한이 있습니다.", Toast.LENGTH_LONG).show();
-                } else {
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(MenuActivity.this, Manifest.permission.READ_CALENDAR))
-                        Toast.makeText(getApplicationContext(), "달력 권한이 필요합니다.", Toast.LENGTH_LONG).show();
-                    else
-                        ActivityCompat.requestPermissions(MenuActivity.this, new String[]{Manifest.permission.READ_CALENDAR}, 1);
-                }
+                ActivityCompat.requestPermissions(MenuActivity.this, new String[]{Manifest.permission.READ_CALENDAR}, REQUEST_PERMISSION_CALENDAR);
             }
         });
 
@@ -63,15 +50,7 @@ public class MenuActivity extends AppCompatActivity {
         button_camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA)
-                        == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(getApplicationContext(), "카메라 권한이 있습니다.", Toast.LENGTH_LONG).show();
-                } else {
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(MenuActivity.this, Manifest.permission.CAMERA))
-                        Toast.makeText(getApplicationContext(), "카메라 권한이 필요합니다.", Toast.LENGTH_LONG).show();
-                    else
-                        ActivityCompat.requestPermissions(MenuActivity.this, new String[]{Manifest.permission.CAMERA}, 2);
-                }
+                ActivityCompat.requestPermissions(MenuActivity.this, new String[]{Manifest.permission.CAMERA}, REQUEST_PERMISSION_CAMERA);
             }
         });
 
@@ -92,7 +71,7 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), ConfirmActivity.class);
 
         switch (requestCode) {
-            case 0:
+            case REQUEST_PERMISSION_LOCATION:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     intent.putExtra("msg", "위치 권한 인증 성공");
                     intent.putExtra("confirm", RESULT_CODE_ALLOW);
@@ -104,7 +83,7 @@ public class MenuActivity extends AppCompatActivity {
                 intent.putExtra("type", "위치 권한");
                 startActivityForResult(intent, REQUEST_CODE_MENU);
                 return;
-            case 1:
+            case REQUEST_PERMISSION_CALENDAR:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     intent.putExtra("msg", "달력 권한 인증 성공");
                     intent.putExtra("confirm", RESULT_CODE_ALLOW);
@@ -116,7 +95,7 @@ public class MenuActivity extends AppCompatActivity {
                 intent.putExtra("type", "달력 권한");
                 startActivityForResult(intent, REQUEST_CODE_MENU);
                 return;
-            case 2:
+            case REQUEST_PERMISSION_CAMERA:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     intent.putExtra("msg", "카메라 권한 인증 성공");
                     intent.putExtra("confirm", RESULT_CODE_ALLOW);

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffa7a7"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edittext_url"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button_naver"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="네이버"
+            android:layout_weight="2" />
+
+        <Button
+            android:id="@+id/button_move"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="이동"
+            android:layout_weight="2" />
+    </LinearLayout>
+    
+    <WebView
+        android:id="@+id/webview_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

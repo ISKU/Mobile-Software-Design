@@ -20,6 +20,7 @@ Contents
 - [Lab6-2](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab06_2): Landscape and Portrait Changes
 - [Lab6-3](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab06_3): ActionBar
 - [Lab7-1](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab07_1): Bitmap Button
+- [Lab7-2](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab07_2): ListView
 
 **Homework**
 - [hw1](https://github.com/ISKU/Mobile-Software-Design/tree/master/MS_hw01_201201356): Calculator Layout

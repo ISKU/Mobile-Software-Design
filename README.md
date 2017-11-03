@@ -23,6 +23,7 @@ Contents
 - [Lab7-2](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab07_2): ListView
 - [Lab7-3](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab07_3): GridView
 - [Lab8-1](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab08_1): Multiple Widget
+- [Lab8-2](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab08_2): Multi Touch
 
 **Homework**
 - [hw1](https://github.com/ISKU/Mobile-Software-Design/tree/master/MS_hw01_201201356): Calculator Layout

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is multiple widget that select both date and time." />
+
+    <TextView
+        android:id="@+id/textview_datetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <lab.lab08_1.DateTimePicker
+        android:id="@+id/datetimepicker_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

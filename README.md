@@ -25,6 +25,7 @@ Contents
 - [Lab8-1](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab08_1/app/src/main): Multiple Widget
 - [Lab8-2](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab08_2/app/src/main): Multi Touch
 - [Lab9-1](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab09_1/app/src/main): Drawable
+- [Lab9-2](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab09_2/app/src/main): Graphics (Drawable, Paint, Canvas)
 
 **Homework**
 - [hw1](https://github.com/ISKU/Mobile-Software-Design/tree/master/MS_hw01_201201356/app/src/main): Calculator Layout
@@ -36,3 +37,4 @@ Contents
 - [hw6](https://github.com/ISKU/Mobile-Software-Design/tree/master/MS_hw06_201201356/app/src/main): WebView
 - [hw7](https://github.com/ISKU/Mobile-Software-Design/tree/master/MS_hw07_201201356/app/src/main): ListView
 - [hw8](https://github.com/ISKU/Mobile-Software-Design/tree/master/MS_hw08_201201356/app/src/main): GridView
+- [hw9](https://github.com/ISKU/Mobile-Software-Design/tree/master/MS_hw09_201201356/app/src/main): Move Rectangle

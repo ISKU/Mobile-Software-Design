@@ -8,7 +8,6 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Rect;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -20,6 +19,10 @@ public class PaintBoard extends View {
     public static final float TOUCH_TOLERANCE = 8;
     private static final boolean RERNDERING_ANTIALIAS = true;
     private static final boolean DITHER_FLAG = true;
+
+    private int mInvalidateExtraBorder = 10;
+    private int mCertainColor = 0xff000000;
+    private float mStrokeWidth = 2.0f;
 
     private Stack undos = new Stack();
     private final Path mPath = new Path();
@@ -34,13 +37,14 @@ public class PaintBoard extends View {
     private float mCurveEndX;
     private float mCurveEndY;
 
-    private int mInvalidateExtraBorder = 10;
-    private int mCertainColor = 0xff000000;
-    private float mStrokeWidth = 2.0f;
-
     public PaintBoard(Context context) {
         super(context);
         this.mPaint = new Paint();
+        this.mPaint.setStyle(Paint.Style.STROKE);
+        this.mPaint.setStrokeWidth(mStrokeWidth);
+        this.mPaint.setColor(mCertainColor);
+        this.mPaint.setAntiAlias(RERNDERING_ANTIALIAS);
+        this.mPaint.setDither(DITHER_FLAG);
     }
 
     public void clearUndo() {

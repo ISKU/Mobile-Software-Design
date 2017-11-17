@@ -59,7 +59,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message message) {
             progressbar_progress.incrementProgressBy(5);
-            textview_status.setText(progressbar_progress.getProgress() == progressbar_progress.getMax() ? "Done" : "Working");
+            
+            if (progressbar_progress.getProgress() == progressbar_progress.getMax())
+                textview_status.setText("Done");
+            else
+                textview_status.setText("Working... " + progressbar_progress.getProgress());        
         }
     }
 }

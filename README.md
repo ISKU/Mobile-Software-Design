@@ -27,6 +27,7 @@ Contents
 - [Lab9-1](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab09_1/app/src/main): Drawable
 - [Lab9-2](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab09_2/app/src/main): Graphics (Drawable, Paint, Canvas)
 - [Lab10-1](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab10_1/app/src/main): Cover Flow Image List
+- [Lab10-2](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab10_2/app/src/main): Handler
 
 **Homework**
 - [hw1](https://github.com/ISKU/Mobile-Software-Design/tree/master/MS_hw01_201201356/app/src/main): Calculator Layout

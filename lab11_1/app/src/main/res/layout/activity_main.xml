@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼을 누르면 소켓 연결됩니다. 메시지는 로그를 확인하세요." />
+
+    <Button
+        android:id="@+id/button_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="소켓 연결하기"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/edittext_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="연결할 소켓 IP"
+        android:text="192.168.0.11"
+        android:textSize="16dp" />
+</LinearLayout>

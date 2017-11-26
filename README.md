@@ -29,7 +29,7 @@ Contents
 - [Lab10-1](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab10_1/app/src/main): Cover Flow Image List
 - [Lab10-2](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab10_2/app/src/main): Handler
 - [Lab10-3](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab10_3/app/src/main): Runnable
-- [Lab11-1](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab11_1/app/src/main): Socket [Server](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab11_1/JavaSocket)
+- [Lab11-1](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab11_1/app/src/main): Socket [(Server)](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab11_1/JavaSocket)
 - [Lab11-2](https://github.com/ISKU/Mobile-Software-Design/tree/master/lab11_2/app/src/main): Http Request
 
 **Homework**
